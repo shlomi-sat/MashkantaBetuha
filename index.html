@@ -85,20 +85,25 @@
 
         .floating-icons {
             position: fixed;
-            bottom: 20px;
+            bottom: 10px;
+            z-index: 1000;
+        }
+
+        .whatsapp {
             right: 20px;
         }
 
-        .floating-icons a {
-            display: block;
-            margin: 10px 0;
+        .facebook {
+            left: 20px;
         }
 
         .floating-icons img {
             width: 50px;
             height: 50px;
-            border-radius: 50%;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            background-color: transparent;
+            border-radius: 0;
+            box-shadow: none;
         }
 
         /* עיצוב החלון הקופץ */
@@ -203,6 +208,18 @@
 <footer>
     <p>משכנתא בטוחה - כל הזכויות שמורות 2024 ©</p>
 </footer>
+
+<!-- אייקונים צפים של וואטסאפ ופייסבוק -->
+<div class="floating-icons whatsapp" style="position:fixed;bottom:10px;right:20px;">
+    <a href="https://wa.me/972502638644?text=אני%20זקוק%20לעזרה%20עם%20המשכנתא" target="_blank">
+        <img src="whatsapp.svg" alt="WhatsApp" width="50" height="50">
+    </a>
+</div>
+<div class="floating-icons facebook" style="position:fixed;bottom:10px;left:20px;">
+    <a href="https://www.facebook.com/share/g/mPAmG2d9e9rxjPxm/" target="_blank">
+        <img src="facebook.svg" alt="Facebook" width="50" height="50">
+    </a>
+</div>
 
 <!-- JavaScript לחלון הקופץ -->
 <script>
