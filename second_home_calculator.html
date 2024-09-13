@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-V6CLT61J5S"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+  		gtag('config', 'G-V6CLT61J5S');
+	</script>
+	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מחשבון עסקת נדל"ן לדירה שניה</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            text-align: right;
+            padding-bottom: 100px;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .breadcrumb {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .input-section, .output-section {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-section {
+            background-color: #f2f2f2;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .floating-icons {
+            position: fixed;
+            bottom: 10px;
+        }
+
+        .whatsapp {
+            right: 20px;
+            position: fixed;
+        }
+
+        .facebook {
+            left: 20px;
+            position: fixed;
+        }
+
+        .floating-icons img {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            background-color: transparent;
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        table {
+            width: 100%;
+            max-width: 900px;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: right;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        #finalText p {
+            line-height: 1.6;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+
+        /* עיצוב החלון הקופץ */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 1000;
+            border: 2px solid #4CAF50;
+        }
+
+        .popup h3 {
+            margin: 0 0 15px 0;
+        }
+
+        .popup p {
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+
+        .popup .close-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .popup .close-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* עיצוב המסך הרקע הכהה */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>משכנתא בטוחה</h1>
+        <p>הפתרון למשכנתא שמתאימה בדיוק עבורך</p>
+    </header>
+
+    <!-- סרגל ניווט שחור -->
+    <nav>
+        <a href="index.html">בית</a>
+        <a href="first_home_mortgage.html">משכנתא לדירה ראשונה</a>
+        <a href="upgrading_home_mortgage.html">משכנתא למשפרי דיור</a>
+        <a href="second_home_mortgage.html">משכנתא לדירה שניה</a>
+        <a href="mortgage_refinance.html">מחזור משכנתא</a>
+        <a href="#" id="contactBtn">יצירת קשר</a>
+    </nav>
+
+    <!-- נתיב ניווט -->
+    <div class="breadcrumb">
+        <a href="index.html">בית</a> > <a href="second_home_mortgage.html">משכנתא לדירה שניה</a> > מחשבון לדירה שניה
+    </div>
+
+    <div class="container">
+        <h1>מחשבון עסקת נדל"ן לדירה שניה</h1>
+
+        <div class="input-section">
+            <form id="realEstateCalculator">
+                <label>מחיר דירה (שקלים):</label>
+                <input type="number" id="apartmentPrice" value="1400000" min="1" required><br>
+
+                <label>תיווך (%):</label>
+                <input type="number" id="brokerFee" value="2" min="0.1" step="0.1" required><br>
+
+                <label>עו"ד (%):</label>
+                <input type="number" id="lawyerFee" value="0.5" min="0.1" step="0.1" required><br>
+
+                <label>הערכת הוצאות נוספות (שקלים):</label>
+                <input type="number" id="miscellaneous" value="20000" min="1" required><br>
+
+                <label>הון עצמי (שקלים):</label>
+                <input type="number" id="ownCapital" value="755000" min="1" required><br>
+
+                <label>הכנסות חודשיות נטו (לאחר הורדת הלוואות) של משק הבית (שקלים):</label>
+                <input type="number" id="householdIncome" value="22000" min="1" required><br>
+
+                <label>החזר חודשי על משכנתא קיימת (שקלים):</label>
+                <input type="number" id="existingMortgagePayment" value="3500" min="0" required><br>
+
+                <label>הערכת החזר משכנתא ל 30 שנה לכל 100k (שקלים) - לא לגעת, למתקדמים בלבד:</label>
+                <input type="number" id="mortgagePer100k" value="600" min="1" required><br>
+
+                <div class="buttons">
+                    <button type="button" onclick="calculate()">חשב</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="output-section">
+            <div id="output"></div>
+            <p id="recommendationText" style="display:none;"></p>
+
+            <table id="summaryTable" style="display:none;">
+                <thead>
+                    <tr>
+                        <th>פרמטר</th>
+                        <th>ערך</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>מחיר דירה</td>
+                        <td id="resultPrice"></td>
+                    </tr>
+                    <tr>
+                        <td>תיווך</td>
+                        <td id="resultBrokerFee"></td>
+                    </tr>
+                    <tr>
+                        <td>עו"ד</td>
+                        <td id="resultLawyerFee"></td>
+                    </tr>
+                    <tr>
+                        <td>שונות</td>
+                        <td id="resultMiscellaneous"></td>
+                    </tr>
+                    <tr>
+                        <td>הון עצמי למשכנתא</td>
+                        <td id="resultNetCapital"></td>
+                    </tr>
+                    <tr>
+                        <td>משכנתא נדרשת</td>
+                        <td id="resultMortgage"></td>
+                    </tr>
+                    <tr>
+                        <td>הערכת החזר חודשי</td>
+                        <td id="resultMonthlyPayment"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="finalText">
+                <p>לעזרה עם המחשבון, לחצו על הקישור לוואטסאפ. השירות ללא עלות.</p>
+                <p>הצטרפו לקבוצת הפייסבוק שלנו, שם תמצאו מחשבונים וטיפים פיננסיים שיכולים לעזור לכם בבהתנהלות הפיננסית שלכם!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- אייקונים צפים -->
+    <div class="floating-icons whatsapp">
+        <a href="https://wa.me/972502638644?text=אני זקוק לעזרה עם המחשבון." target="_blank">
+            <img src="whatsapp.svg" alt="WhatsApp" width="50" height="50">
+        </a>
+    </div>
+
+    <div class="floating-icons facebook">
+        <a href="https://www.facebook.com/share/g/mPAmG2d9e9rxjPxm/" target="_blank">
+            <img src="facebook.svg" alt="Facebook" width="50" height="50">
+        </a>
+    </div>
+
+    <!-- חלון קופץ ליצירת קשר -->
+    <div class="popup" id="contactPopup">
+        <h3>יצירת קשר</h3>
+        <p>טלפון: <a href="tel:0502638644">050-2638644</a></p>
+        <p>אימייל: <a href="mailto:shlomi.p10@gmail.com">shlomi.p10@gmail.com</a></p>
+        <p>וואטסאפ: <a href="https://wa.me/972502638644?text=אני%20מעוניין%20לקבל%20פרטים%20נוספים" target="_blank">לחץ כאן להתכתבות בוואטסאפ</a></p>
+        <p>נשמח לעמוד לשירותכם בכל שאלה או בקשה!</p>
+        <button class="close-btn" onclick="closePopup()">סגור</button>
+    </div>
+
+    <!-- רקע כהה בעת פתיחת חלון קופץ -->
+    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+    <!-- JavaScript לחלון הקופץ -->
+    <script>
+        // פונקציה לפתיחת החלון הקופץ
+        function openPopup() {
+            document.getElementById('contactPopup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        // פונקציה לסגירת החלון הקופץ
+        function closePopup() {
+            document.getElementById('contactPopup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        // מאזין לאירוע לחיצה על "יצירת קשר"
+        document.getElementById('contactBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            openPopup();
+        });
+    </script>
+
+</body>
+</html>

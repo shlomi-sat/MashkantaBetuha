@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>משכנתא בטוחה - משכנתא לדירה ראשונה</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            text-align: right;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content p {
+            line-height: 1.8;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .buttons a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .buttons a:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .floating-icons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .floating-icons a {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .floating-icons img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* עיצוב החלון הקופץ */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 1000;
+            border: 2px solid #4CAF50; /* מסגרת ירוקה */
+        }
+
+        .popup h3 {
+            margin: 0 0 15px 0;
+        }
+
+        .popup p {
+            margin: 10px 0;
+            line-height: 1.8; /* ריווח שורות גדול יותר */
+        }
+
+        .popup .close-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .popup .close-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* עיצוב המסך הרקע הכהה */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 500;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>משכנתא בטוחה</h1>
+    <p>הפתרון למשכנתא שמתאימה בדיוק עבורך</p>
+</header>
+
+<nav>
+    <a href="#">בית</a>
+    <a href="first_home_mortgage.html">משכנתא לדירה ראשונה</a>
+    <a href="upgrading_home_mortgage.html">משכנתא למשפרי דיור</a>
+    <a href="second_home_mortgage.html">משכנתא לדירה שניה</a>
+    <a href="mortgage_refinance.html">מחזור משכנתא</a>
+    <a href="#" id="contactBtn">יצירת קשר</a>
+</nav>
+
+<div class="content">
+    <h2>למה כדאי לבחור בנו?</h2>
+    <p>ב"משכנתא בטוחה" אנחנו מבינים שמשכנתא היא הרבה יותר מרק הלוואה – זו החלטה מרכזית וארוכת טווח שתשפיע על חייכם הפיננסיים למשך שנים רבות. לכן, אנו כאן כדי לעזור לכם לקבל את ההחלטה הנכונה ביותר ולהבטיח שתקבלו את המשכנתא המתאימה לצרכים שלכם, בתנאים המשתלמים ביותר.</p>
+    
+    <p>הצוות המקצועי שלנו מתמחה בעולם המשכנתאות כבר שנים רבות, ומכיר את השוק לעומק. אנו עובדים בשיתוף פעולה עם מגוון בנקים וגופים פיננסיים מובילים, מה שמאפשר לנו להתאים את המשכנתא הנכונה לכל לקוח באופן אישי. זה לא משנה אם אתם רוכשים את הדירה הראשונה שלכם, ממחזרים משכנתא קיימת, או משקיעים בנכס שני – לנו יש את הידע והניסיון להוביל אתכם בביטחון ובמקצועיות לכל אורך הדרך.</p>
+    
+    <p>מה שמייחד אותנו הוא לא רק היכולת המקצועית שלנו, אלא גם השירות האישי והמסור שאנחנו מעניקים לכל לקוח. אנחנו מאמינים בגישה של ליווי צמוד – מהפגישה הראשונה, דרך המשא ומתן מול הבנקים ועד לחתימה על המשכנתא עצמה. אתם לא לבד בתהליך הזה – אנחנו כאן כדי להסביר, לייעץ, ולוודא שאתם מבינים כל שלב ומקבלים החלטות מושכלות.</p>
+    
+    <p>אנו מחויבים לשקיפות מלאה מול לקוחותינו. כל שלב בתהליך יוסבר לכם במלואו, בלי הפתעות לא צפויות, כך שתוכלו להיות רגועים ובטוחים שהמשכנתא שלכם בידיים טובות. בזכות הקשרים הענפים שלנו עם הבנקים והיכולת שלנו להשיג את התנאים הטובים ביותר בשוק, אנו יכולים להבטיח שאתם תקבלו משכנתא בריבית האטרקטיבית ביותר ובתנאים הנוחים ביותר.</p>
+    
+    <p>בנוסף, אנחנו מבינים שכל משפחה היא שונה, וכל אדם נמצא בשלב פיננסי שונה בחייו. לכן, אנו מציעים פתרונות גמישים שמותאמים אישית לכל לקוח, כך שתוכלו לקחת משכנתא שמתאימה בדיוק למצבכם הנוכחי, ולחזון הפיננסי שלכם לעתיד.</p>
+    
+    <p><strong>בסופו של דבר, המטרה שלנו היא אחת – לעזור לכם לקבל את המשכנתא הטובה ביותר, עם תנאים שאתם יכולים להרשות לעצמכם, כך שתוכלו להגשים את החלום שלכם לרכוש נכס בביטחון ובראש שקט.</strong></p>
+    
+    <p><strong>בחרו ב"משכנתא בטוחה" – כי אנחנו כאן כדי להפוך את תהליך המשכנתא לפשוט, משתלם ומוצלח עבורכם.</strong></p>
+</div>
+
+<!-- חלון קופץ -->
+<div class="popup" id="contactPopup">
+    <h3>יצירת קשר</h3>
+    <p>טלפון: <a href="tel:0502638644">050-2638644</a></p>
+    <p>אימייל: <a href="mailto:shlomi.p10@gmail.com">shlomi.p10@gmail.com</a></p>
+    <p>וואטסאפ: <a href="https://wa.me/972502638644?text=אני%20מעוניין%20לקבל%20פרטים%20נוספים" target="_blank">לחץ כאן להתכתבות בוואטסאפ</a></p>
+    <p>נשמח לעמוד לשירותכם בכל שאלה או בקשה!</p>
+    <button class="close-btn" onclick="closePopup()">סגור</button>
+</div>
+
+<!-- רקע כהה בעת פתיחת חלון קופץ -->
+<div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+<footer>
+    <p>משכנתא בטוחה - כל הזכויות שמורות 2024 ©</p>
+</footer>
+
+<!-- JavaScript לחלון הקופץ -->
+<script>
+    // פונקציה לפתיחת החלון הקופץ
+    function openPopup() {
+        document.getElementById('contactPopup').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+    }
+
+    // פונקציה לסגירת החלון הקופץ
+    function closePopup() {
+        document.getElementById('contactPopup').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    }
+
+    // מאזין לאירוע לחיצה על "יצירת קשר"
+    document.getElementById('contactBtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        openPopup();
+    });
+</script>
+
+</body>
+</html>

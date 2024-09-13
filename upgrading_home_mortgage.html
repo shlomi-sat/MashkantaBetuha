@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>משכנתא בטוחה - משכנתא למשפרי דיור</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            text-align: right;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            line-height: 1.8;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        .breadcrumb {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            position: relative;
+        }
+
+        footer p {
+            display: inline;
+            margin: 0;
+        }
+
+        /* אייקונים צפים */
+        .floating-icons {
+            position: fixed;
+            bottom: 20px;
+        }
+
+        /* וואטסאפ בצד ימין */
+        .floating-icons.whatsapp {
+            right: 20px;
+        }
+
+        /* פייסבוק בצד שמאל */
+        .floating-icons.facebook {
+            left: 20px;
+        }
+
+        .floating-icons img {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            border-radius: 0;
+            box-shadow: none;
+            background-color: transparent;
+        }
+
+        /* עיצוב החלון הקופץ */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 1000;
+            border: 2px solid #4CAF50;
+        }
+
+        .popup h3 {
+            margin: 0 0 15px 0;
+        }
+
+        .popup p {
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+
+        .popup .close-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .popup .close-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* עיצוב המסך הרקע הכהה */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 500;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>משכנתא בטוחה</h1>
+    <p>הפתרון למשכנתא שמתאימה בדיוק עבורך</p>
+</header>
+
+<!-- שורה שחורה עם קישורים -->
+<nav>
+    <a href="index.html">בית</a>
+    <a href="first_home_mortgage.html">משכנתא לדירה ראשונה</a>
+    <a href="upgrading_home_mortgage.html">משכנתא למשפרי דיור</a>
+    <a href="second_home_mortgage.html">משכנתא לדירה שניה</a>
+    <a href="mortgage_refinance.html">מחזור משכנתא</a>
+    <a href="#" id="contactBtn">יצירת קשר</a>
+</nav>
+
+<!-- נתיב ניווט במרכז -->
+<div class="breadcrumb">
+    <a href="index.html">בית</a> > משכנתא למשפרי דיור
+</div>
+
+<div class="content">
+    <h2>תהליך שיפור דיור ולקיחת משכנתא</h2>
+    <p>שיפור דיור הוא שלב משמעותי בחיים שמביא איתו אתגרים כלכליים חדשים, בעיקר כשמדובר בלקיחת משכנתא. כאשר אתם מחליטים לשדרג את מקום מגוריכם, חשוב להבין את ההשלכות הכלכליות והמשפטיות של התהליך.</p>
+    
+    <h3>הון עצמי</h3>
+    <p>בשיפור דיור, מכירת הדירה הקיימת יכולה לשמש כחלק מההון העצמי שלכם. עם זאת, לעיתים עלול להיווצר מצב שבו עדיין תצטרכו להוסיף הון עצמי מעבר לכספים שתפיקו ממכירת הדירה. על פי החוק בישראל, עליכם לספק לפחות 30% הון עצמי ממחיר הדירה החדשה אם זו אינה דירה ראשונה.</p>
+
+    <h3>משכנתא לשיפור דיור</h3>
+    <p>לאחר שהשגתם את ההון העצמי הדרוש, עליכם לפנות לבנק ולבקש משכנתא לשיפור דיור. משכנתא זו תחליף את המשכנתא הקיימת (אם ישנה), או תתווסף לה בהתאם למידת הצורך. ניתן לבחור במסלולים דומים לאלו של משכנתא לדירה ראשונה, עם אפשרויות כמו ריבית קבועה, משתנה, או ריבית פריים.</p>
+
+    <h3>מסלולי משכנתא עיקריים למשפרי דיור</h3>
+    <p>בדומה לרכישת דירה ראשונה, משפרי דיור יכולים לבחור בין מספר מסלולי משכנתא נפוצים:</p>
+
+    <ul>
+        <li><strong>ריבית קבועה לא צמודה:</strong> מסלול זה מציע ריבית קבועה לאורך כל התקופה, ללא השפעה משינויים במדד המחירים לצרכן.</li>
+
+        <li><strong>ריבית קבועה צמודה למדד:</strong> במסלול זה הריבית קבועה, אך הקרן והתשלומים משתנים בהתאם למדד המחירים לצרכן. כאשר המדד עולה, גם התשלומים החודשיים יעלו.</li>
+
+        <li><strong>ריבית משתנה כל 5 שנים (צמודה למדד):</strong> הריבית מתעדכנת אחת לחמש שנים, והקרן צמודה למדד המחירים לצרכן.</li>
+
+        <li><strong>משכנתא בריבית פריים:</strong> במסלול זה הריבית מתעדכנת בהתאם לריבית הפריים, שעלולה להשתנות בהתאם לריבית בנק ישראל.</li>
+
+        <li><strong>ריבית משתנה ללא הצמדה:</strong> במסלול זה הריבית משתנה אחת לכמה שנים (לדוגמה, כל 5 שנים), אך הקרן אינה צמודה למדד המחירים לצרכן.</li>
+    </ul>
+
+    <h3>שלבים בתהליך לקיחת משכנתא לשיפור דיור</h3>
+    <ol>
+        <li>קבלת אישור עקרוני: הבנק יבצע בדיקה ראשונית של מצבכם הפיננסי כדי לאשר את מתן המשכנתא.</li>
+        <li>בדיקת שמאות לדירה החדשה: הבנק ידרוש לבצע שמאות לדירה החדשה לצורך קביעת שוויה ונתינת אישור סופי לגובה המשכנתא.</li>
+        <li>חתימה על מסמכי המשכנתא: לאחר קבלת האישור הסופי, תחתמו על מסמכי המשכנתא ותתחילו את תהליך מימון הדירה החדשה.</li>
+    </ol>
+
+    <h3>סיכום</h3>
+    <p>תהליך שיפור דיור כולל בתוכו אתגרים כלכליים ותכנון מדוקדק. עליכם לדאוג לכך שההון העצמי הנדרש ברשותכם, ולבחור במשכנתא שמתאימה לצרכים שלכם. מעבר לכך, שיפור דיור דורש הבנה רחבה של תנאי השוק ושיתוף פעולה עם הבנקים.</p>
+
+    <p><strong>לפרטים נוספים, עברו למחשבון היתכנות עסקת נדל"ן עבור משפרי דיור <a href="upgrading_home_calculator.html">כאן</a>.</strong></p>
+    <p>מחשבון היתכנות עסקת נדל"ן למשפרי דיור עוזר לכם לבדוק האם יש לכם את התנאים הכלכליים המינימליים לביצוע עסקת נדל"ן נוספת. הוא בודק את היכולת הכלכלית שלכם לבצע שיפור דיור, ומסייע לכם להבין האם ההון העצמי והכנסותיכם החודשיות מספיקות לצורך לקיחת משכנתא נוספת.</p>
+</div>
+
+<footer>
+    <p>משכנתא בטוחה - כל הזכויות שמורות 2024 ©</p>
+</footer>
+
+<!-- אייקונים צפים לוואטסאפ ופייסבוק -->
+<div class="floating-icons whatsapp">
+    <a href="https://wa.me/972502638644?text=אני%20זקוק%20לעזרה%20עם%20המחשבון." target="_blank">
+        <img src="whatsapp.svg" alt="WhatsApp">
+    </a>
+</div>
+
+<div class="floating-icons facebook">
+    <a href="https://www.facebook.com/share/g/mPAmG2d9e9rxjPxm/" target="_blank">
+        <img src="facebook.svg" alt="Facebook">
+    </a>
+</div>
+
+<!-- חלון קופץ ליצירת קשר -->
+<div class="popup" id="contactPopup">
+    <h3>יצירת קשר</h3>
+    <p>טלפון: <a href="tel:0502638644">050-2638644</a></p>
+    <p>אימייל: <a href="mailto:shlomi.p10@gmail.com">shlomi.p10@gmail.com</a></p>
+    <p>וואטסאפ: <a href="https://wa.me/972502638644?text=אני%20מעוניין%20לקבל%20פרטים%20נוספים" target="_blank">לחץ כאן להתכתבות בוואטסאפ</a></p>
+    <p>נשמח לעמוד לשירותכם בכל שאלה או בקשה!</p>
+    <button class="close-btn" onclick="closePopup()">סגור</button>
+</div>
+
+<!-- רקע כהה בעת פתיחת חלון קופץ -->
+<div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+<!-- JavaScript לחלון הקופץ -->
+<script>
+    // פונקציה לפתיחת החלון הקופץ
+    function openPopup() {
+        document.getElementById('contactPopup').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+    }
+
+    // פונקציה לסגירת החלון הקופץ
+    function closePopup() {
+        document.getElementById('contactPopup').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    }
+
+    // מאזין לאירוע לחיצה על "יצירת קשר"
+    document.getElementById('contactBtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        openPopup();
+    });
+</script>
+
+</body>
+</html>
